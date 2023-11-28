@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<script>
-function validateForm() {
-  var x = document.forms["myForm"]["fname"].value;
-  if (x == "" || x == null) {
-    alert("Name must be filled out");
-    return false;
-  }
-}
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDICAL INSURANCE</title>
 </head>
 <body>
+    <h2>Medical Insurance Cost</h2>
 
-<h2>Enter Details</h2>
-<p>Try to submit the form without entering any text.</p>
+    <form action="/charges" method="POST">
 
-<form name="myForm" action="http://127.0.0.1:5002/" onsubmit="return validateForm()" method="get" required>
-  Name: <input type="text" name="fname">
-  <input type="submit" value="Submit">
-</form>
+        <br>
+        Age: <input type="text" name="age"> <br>
+        <br>
+        Sex:
+        <select name="sex">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select> <br>
+        <br>
+        BMI: <input type="text" name="bmi"> <br>
+        <br>
+        Children: <input type="text" name="children"> <br>
+        <br>
+        Smoker:
+        <select name="smoker">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select> <br>
+        <br>
+        Region:
+        <select name="region">
+            <option value="southwest">Southwest</option>
+            <option value="southeast">Southeast</option>
+            <option value="northwest">Northwest</option>
+            <option value="northeast">Northeast</option>
+        </select> <br>
+        <br>
+        
+        <input type="submit" value="Submit">
 
+    </form>
 </body>
 </html>
